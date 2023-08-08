@@ -29,8 +29,7 @@
   .tweet-container {
     background: var(--primary-color);
     padding: 1rem;
-    max-width: 500px; /* Adjusted max-width for larger screens */
-    margin: 0 auto; /* Adjusted max-width for larger screens */
+    
     border-radius: 1.5rem;
     user-select: none;
     margin-bottom: 1rem;
@@ -39,6 +38,11 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Noto Serif Kannada', serif;
     font-family: 'Roboto', sans-serif;
+    max-width: 500px; /* Adjusted max-width for larger screens */
+    margin: 0 auto; /* Center the tweet container */
+    transition: max-height 0.3s ease-in-out; 
+    padding-top: calc(9 / 16 * 100%); /* 16:9 aspect ratio */
+    position: relative;
   }
   
   /* the title and the twitter handle */
@@ -220,12 +224,21 @@
 #generate-btn:hover {
     background-color: #0c7bbf;
 }
-media (max-width: 576px) {
+@media (max-width: 576px) {
   .tweet-container {
     max-width: 90%; /* Adjusted max-width for small screens */
+    padding-top: calc(9 / 16 * 100%); /* 16:9 aspect ratio */
   }
-  
-  .awesome-form {
-    max-width: 90%; /* Adjusted max-width for the form on small screens */
+
+@media (max-width: 576px) {
+   .awesome-form {
+    /* ... (existing awesome form styles) ... */
+    max-width: 90%; /* Adjusted max-width for small screens */
+    padding-top: calc(9 / 16 * 100%); /* 16:9 aspect ratio */
+  }
+
+  .awesome-form.active {
+    max-height: 500px; /* Adjust the max-height to reveal the form */
+    /* ... (existing awesome form styles) ... */
   }
 }
