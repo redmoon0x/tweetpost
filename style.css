@@ -29,7 +29,8 @@
   .tweet-container {
     background: var(--primary-color);
     padding: 1rem;
-    max-width: 400px; /* Adjusted max-width for larger screens */
+    max-width: 500px; /* Adjusted max-width for larger screens */
+    margin: 0 auto; /* Adjusted max-width for larger screens */
     border-radius: 1.5rem;
     user-select: none;
     margin-bottom: 1rem;
@@ -109,7 +110,8 @@
   .awesome-form {
     display: none;
     background: #ffffff;
-    max-width: 300px;
+     max-width: 400px; /* Adjusted max-width for the form */
+     margin: 0 auto; 
     margin: 0 auto;
     padding: 40px;
     border-radius: 10px;
